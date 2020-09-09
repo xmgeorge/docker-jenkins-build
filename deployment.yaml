@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
       - name: k8deploy
-        image: georgeulahannan/dockerplugin
+        image: georgeulahannan/dockerplugin:${BUILD_NUMBER}
         ports:
         - containerPort: 80
       imagePullSecrets:
