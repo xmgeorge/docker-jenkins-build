@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: k8deploy
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: k8deploy
+    spec:
+      containers:
+      - name: k8deploy
+        image: georgeulahannan/dockerplugin
+        ports:
+        - containerPort: 80
+      imagePullSecrets:
+      - name: $KUBERNETES_SECRET_NAME
