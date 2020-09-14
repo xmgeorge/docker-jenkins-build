@@ -4,6 +4,9 @@ metadata:
   name: k8deploy
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: k8deploy
   template:
     metadata:
       labels:
@@ -11,6 +14,6 @@ spec:
     spec:
       containers:
       - name: k8deploy
-        image: georgeulahannan/dockerplugin:${BUILD_NUMBER}
+        image: georgeulahannan/dockerplugin:latest
         ports:
         - containerPort: 80
