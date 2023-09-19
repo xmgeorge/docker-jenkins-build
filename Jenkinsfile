@@ -29,3 +29,4 @@ node {
       sh 'kubectl apply -f my-kubernetes-directory'
     }
 }
+}
