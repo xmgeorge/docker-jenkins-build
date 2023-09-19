@@ -1,11 +1,6 @@
 node {
   stage('List pods') {
-    withKubeConfig([credentialsId: 'xminds',
-                    caCertificate: 'kube-ca',
-                    serverUrl: 'https://192.168.49.2:8443',
-                    contextName: 'minikube',
-                    clusterName: 'minikube',
-                    namespace: 'default'
+    withKubeConfig([credentialsId: 'kubedemo'
                     ]) {
       sh 'kubectl get pods'
     }
