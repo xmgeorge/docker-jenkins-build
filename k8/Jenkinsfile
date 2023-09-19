@@ -1,6 +1,6 @@
 node {
   stage('List pods') {
-    withKubeConfig([credentialsId: 'kube-ca',
+    withKubeConfig([credentialsId: 'xminds',
                     caCertificate: 'kube-ca',
                     serverUrl: 'https://192.168.49.2:8443',
                     contextName: 'minikube',
